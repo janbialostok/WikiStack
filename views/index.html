@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}WikiStack{% endblock %}
+{% block content %}
+    <ul>
+    	<li><a href="#">Fullstack Home</a></li>
+    	<li><a href="about_us">About Me</a></li>
+    	<li><a href="#">My Projects</a></li>
+    	<li><a href="#">My City</a></li>
+    	<li><a href="#">Code I've Written</a></li>
+    	{% if docs.length > 0 %}
+	    	{% for doc in docs %}
+	    		<li><a href="{{doc.url_name}}">{{doc|page_link}}</a></li>
+	    	{% endfor %}
+	    {% else %}
+	    There are no new pages. Why don't you <a href='add'>add one</a>?
+	    {% endif %}
+    </ul>
+{% endblock %}

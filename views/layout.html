@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}WikiStack{% endblock %}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+  	{% block header %}
+  	<nav class="navbar navbar-inverse navbar-fixed-top" style="padding-top:1%;" role="navigator">
+    	<a href="/" class='navbar-tabs' style='font-size:large'>WIKISTACK</a>
+    	<a href="/add" class='navbar-tabs'>ADD PAGE</a>
+    	<a href='/tag_search' class='navbar-tabs'>SEARCH TAGS</a>
+    </nav>
+  	{% endblock %}
+  	{% block banner %}
+  	{% if page.title != "" %}
+  		<h1>{{page.title.toUpperCase()}}</h1>
+  	{% else %}
+  		<h1>{{pageBanner}}{{page.url_name.toUpperCase()}}</h1>
+  	{% endif %}
+  	<hr>
+  	{% endblock %}
+    {% block content %}
+    
+
+    {% endblock %}
+    {% block footer %}
+    <hr>
+    <p>WikiStack, Fullstack Academy</p>
+    {% endblock %}
+  </body>
+</html>

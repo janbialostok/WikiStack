@@ -1,0 +1,46 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar-tabs {
+	color: #a9a9a9;
+	font-weigth:bolder;
+	text-decoration:none;
+	padding:0% 0% 0% 2.5%;
+}
+
+.navbar-tabs:hover {
+	color:white;
+	text-decoration: none;
+}
+
+#submit_btn {
+	background-color: #00b7ff;
+	color: white;
+}
+
+#submit_btn:hover {
+	background-color: grey;
+	color: black;
+}
+
+#container {
+	margin:5% 2.5% auto 2.5%;
+	font-weight:bolder;
+	font-size:small;
+}
+
+.tag {
+	margin-right:1%;
+	text-decoration: none;
+}
+
+.tag:hover {
+	text-decoration:underline;
+	color:black;
+}

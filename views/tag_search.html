@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}WikiStack - Add Page{% endblock %}
+
+{% block content %}
+	<form action='/tag_search/submit' method='GET'>
+		<div class='form-group'>
+			<label for='tagSelect'>SELECT TAG</label>
+			<select id='tagSelect' class='form-control' name='tagSelect'>
+				{% for tag in tags %}
+				<option value='{{tag}}'>{{tag}}</option>
+				{% endfor %}
+			</select>
+		</div>
+		<input value='SEARCH' type='submit' id='submit_btn' class='btn btn-default'>
+	</form>
+{% endblock %}

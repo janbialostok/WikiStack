@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}WikiStack - User Content{% endblock %}
+
+{% block content %}
+	{% if page.tags.length > 0 %}
+	<div id='tags'>
+		<span style="margin-right:1%">Tags: </span>
+		{% for tag in page.tags %}
+		<a href='#' class='tag'>{{tag}}</a>
+		{% endfor %}
+	</div>
+	{% endif %}
+	<div id='container'>
+		<p style='font-family: Lucida Console'>{{page.body|marked}}</p>
+	</div>
+{% endblock %}
